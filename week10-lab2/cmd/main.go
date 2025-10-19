@@ -5,10 +5,10 @@ import (
 
 	"week10-lab2/internal/handler"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/gin-contrib/cors"
 )
 
 // @title           Simple API Example
@@ -26,7 +26,7 @@ func main() {
 	// User API routes
 	api := r.Group("/api/v1")
 	{
-		api.GET("/books/:id", handler.GetBookByID) // ใช้ Handler จากไฟล์ book_handler.go
+		api.GET("/books/:id", handler.GetBookByID) // ใช้ Handler จากไฟล์ user_handler.go
 	}
 
 	// Start server
